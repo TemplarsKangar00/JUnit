@@ -10,8 +10,8 @@ public class JUnitTest {
 
 	@Test
 	public void positiveTestGreatestCommonDivisor() {
-		LargestPrimeFactor test = new LargestPrimeFactor(600851475143L);
+		LargestPrimeFactory test = new LargestPrimeFactory(1);
 		long result = test.getLargestPrimeFactory();
-		assertEquals(6857, result);
+		assertEquals(1, result);
 	}
 }
