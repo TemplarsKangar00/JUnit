@@ -14,4 +14,11 @@ public class JUnitTest {
 		long result = test.getLargestPrimeFactory();
 		assertEquals(1, result);
 	}
+
+	@Test(expected = Exception.class)
+	public void check_Zero_expectedException() {
+
+		new LargestPrimeFactory(0);
+		Assert.fail();
+	}
 }
