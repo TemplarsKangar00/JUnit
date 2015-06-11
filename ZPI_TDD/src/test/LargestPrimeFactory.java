@@ -6,6 +6,10 @@ public class LargestPrimeFactory {
 	
 	public LargestPrimeFactory(long number){
 		this.number = number;
+		
+		if (number <1){
+			throw new RuntimeException();
+		}
 	}
 	
 	public long getLargestPrimeFactory() {
