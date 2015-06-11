@@ -10,15 +10,22 @@ public class JUnitTest {
 
 	@Test
 	public void positiveTestGreatestCommonDivisor() {
-		LargestPrimeFactory test = new LargestPrimeFactory(1);
+		LargestPrimeFactory test = new LargestPrimeFactory(600851475143L);
 		long result = test.getLargestPrimeFactory();
-		assertEquals(1, result);
+		assertEquals(6857, result);
 	}
 
 	@Test(expected = Exception.class)
 	public void check_Zero_expectedException() {
 
 		new LargestPrimeFactory(0);
+		Assert.fail();
+	}
+
+	@Test(expected = Exception.class)
+	public void check_negativeNumber_expectedException() {
+
+		new LargestPrimeFactory(-10);
 		Assert.fail();
 	}
 }
